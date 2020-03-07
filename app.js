@@ -27,12 +27,12 @@ const main_loop = () => {
                   joints: joints
                 };
                 mqtt_client.publish('joints', JSON.stringify(data));
-                mqtt_client.publish('joint1', JSON.stringify(joints[1]));
-                mqtt_client.publish('joint2', JSON.stringify(joints[2]));
-                mqtt_client.publish('joint3', JSON.stringify(joints[3]));
-                mqtt_client.publish('joint4', JSON.stringify(joints[4]));
-                mqtt_client.publish('joint5', JSON.stringify(joints[5]));
-                mqtt_client.publish('joint6', JSON.stringify(joints[6]));
+                mqtt_client.publish('joint1', JSON.stringify(joints[0]));
+                mqtt_client.publish('joint2', JSON.stringify(joints[1]));
+                mqtt_client.publish('joint3', JSON.stringify(joints[2]));
+                mqtt_client.publish('joint4', JSON.stringify(joints[3]));
+                mqtt_client.publish('joint5', JSON.stringify(joints[4]));
+                mqtt_client.publish('joint6', JSON.stringify(joints[5]));
                 console.log(start_time_stamp, joints, delta, 'ms');
                 main_loop();
             });
